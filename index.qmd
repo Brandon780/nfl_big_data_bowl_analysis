@@ -1,0 +1,96 @@
+# NFL
+
+## Cargar y unir datos - Big Data Bowl
+
+```{python}
+#| label: "cargar-datos"
+#| echo: false
+#| results: "hide"
+#| message: false
+
+
+import pandas as pd
+import glob
+import os
+
+
+train_folder = r"C:\Users\limco\Documents\Datos_\train"
+
+
+supp_folder = r"C:\Users\limco\Documents\Datos_"
+
+```
+
+
+
+```{python}
+#| label: "cargar-input"
+#| echo: false
+#| results: "hide"
+#| message: false
+
+
+
+input_files = sorted(glob.glob(os.path.join(train_folder, "input_2023_w*.csv")))
+if not input_files:
+    raise FileNotFoundError("No se encontraron archivos de input en la carpeta train")
+
+df_input = pd.concat([pd.read_csv(f) for f in input_files], ignore_index=True)
+print("Inputs cargados:", len(df_input), "filas")
+
+```
+
+
+
+```{python}
+#| label: "cargar-output"
+#| echo: false
+#| results: "hide"
+#| message: false
+
+
+
+
+output_files = sorted(glob.glob(os.path.join(train_folder, "output_2023_w*.csv")))
+if not output_files:
+    raise FileNotFoundError("No se encontraron archivos de output en la carpeta train")
+
+df_output = pd.concat([pd.read_csv(f) for f in output_files], ignore_index=True)
+print("Outputs cargados:", len(df_output), "filas")
+
+```
+
+
+
+```{python}
+#| label: "cargar-supplementary"
+#| echo: false
+#| results: "hide"
+#| message: false
+
+supp_file = os.path.join(supp_folder, "supplementary_data.csv")
+df_sup = pd.read_csv(supp_file, low_memory=False)
+
+# corregir tipo
+df_sup["play_action"] = df_sup["play_action"].astype("boolean")
+
+print("Supplementary cargado:", len(df_sup), "filas")
+
+```
+
+
+
+
+```{python}
+#| label: "unir-datasets"
+#| echo: false
+#| results: "hide"
+
+df_merged = df_input.merge(df_sup, on=['game_id','play_id'], how='left')
+
+
+df_merged = df_merged.merge(df_output, on=['game_id','play_id','nfl_id','frame_id'], how='left')
+
+print("Dataset final:", len(df_merged), "filas")
+```
+

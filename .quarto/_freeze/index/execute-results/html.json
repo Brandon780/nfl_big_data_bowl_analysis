@@ -1,0 +1,12 @@
+{
+  "hash": "93d3865ace15f84ff50e9a76c56280f0",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: NFL\n---\n\n\n\n## Cargar y unir datos - Big Data Bowl\n\n\n\n\n::: {#cargar-input .cell message='false' results='hide' execution_count=2}\n\n::: {.cell-output .cell-output-stdout}\n```\nInputs cargados: 4880579 filas\n```\n:::\n:::\n\n\n::: {#cargar-output .cell message='false' results='hide' execution_count=3}\n\n::: {.cell-output .cell-output-stdout}\n```\nOutputs cargados: 562936 filas\n```\n:::\n:::\n\n\n::: {#cargar-supplementary .cell message='false' results='hide' execution_count=4}\n\n::: {.cell-output .cell-output-stdout}\n```\nSupplementary cargado: 18009 filas\n```\n:::\n:::\n\n\n::: {#unir-datasets .cell results='hide' execution_count=5}\n\n::: {.cell-output .cell-output-stdout}\n```\nDataset final: 4880579 filas\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

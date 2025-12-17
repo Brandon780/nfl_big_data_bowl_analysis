@@ -1,0 +1,94 @@
+/* ===== Texto base ===== */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #000000;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+/* ===== Encabezados ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: #1e4901ff;
+    margin-top: 1.2em;
+}
+
+/* ===== Cursivas brillantes ===== */
+em, i {
+    font-style: italic;
+    color: #b30000;  /* rojo oscuro brillante */
+}
+
+/* ===== Bloques de código ===== */
+pre, code {
+    background-color: #ffe6e6;  /* rojo suave */
+    color: #000000ff;
+    padding: 0.5em 0.8em;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ===== Citas / abstract ===== */
+blockquote {
+    border-left: 4px solid #b30000;
+    background-color: #fff0f0;
+    padding: 0.8em 1em;
+    margin: 1em 0;
+    border-radius: 6px;
+    font-style: italic;
+}
+
+/* ===== Tablas ===== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.6em 0.8em;
+}
+th {
+    background-color: #ffe6e6;
+    color: #b30000;
+    text-align: left;
+}
+
+/* ===== Figuras / imágenes ===== */
+figure {
+    margin: 1em 0;
+    padding: 0.5em;
+    background-color: #fff0f0;
+    border: 1px solid #b30000;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+figcaption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #222222;
+}
+
+/* ===== Ventanas / paneles de código ===== */
+.qmd-code-tools, .code-tools {
+    border-radius: 8px;
+    border: 1px solid #b30000;
+    background-color: #fff0f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+/* ===== Links ===== */
+a {
+    color: #b30000;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Tabla de contenido ===== */
+#TOC {
+    background-color: #fff0f0;
+    borde

@@ -1,0 +1,41 @@
+project: 
+  type: website
+  #output-dir: docs   # Carpeta de salida
+
+website:
+  title: " NFL Players Using Tracking Data "
+  navbar:           # Opcional, si no quieres navbar, elimínalo
+    right:
+      - icon: github
+        href: "https://github.com/Brandon780"
+
+format:
+  html:
+    toc: true
+    toc-title: "Contenidos"
+    toc-location: right
+    toc-expand: true
+    number-sections: true
+    lof: true
+    lot: true
+    css: styles.css
+    math-method: mathjax
+    wrap: none
+    code-fold: true
+    code-tools: true
+    code-layout: full
+    theme: flatly
+
+lang: es
+
+title: "Proyecto Integrador"
+author: "Brandon Martínez"
+date-format: long
+abstract-title: "Resumen"
+abstract: |
+   Movement Dynamics of NFL Players Using Tracking Data.
+description: " Data-Driven"
+tools: "Data-Driven"
+link-citations: true
+document-css: false
+
